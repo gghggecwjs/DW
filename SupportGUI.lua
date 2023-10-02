@@ -5,6 +5,12 @@
 
 local ItemSpawnerGUI = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
+local UIS = game:GetService("UserInputService")
+UIS.InputBegan:Connect(function(input)
+	if input.KeyCode = Enum.KeyCode.Insert then
+		Main.Visible = not Main.Visible
+	end
+end)
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local AJM = Instance.new("TextButton")
